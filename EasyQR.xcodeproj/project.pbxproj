@@ -190,6 +190,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = EasyQR;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permission is needed for QR code scanning";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo library access is needed to save QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -219,6 +220,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = EasyQR;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera permission is needed for QR code scanning";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo library access is needed to save QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
