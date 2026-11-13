@@ -81,5 +81,18 @@ struct CameraPreview: UIViewRepresentable {
     final class PreviewView: UIView {
         override class var layerClass: AnyClass { AVCaptureVideoPreviewLayer.self }
         var previewLayer: AVCaptureVideoPreviewLayer { layer as! AVCaptureVideoPreviewLayer }
+
+        // Keeps the preview upright when an iPad rotates (iPhone is portrait-only).
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            guard let connection = previewLayer.connection, connection.isVideoOrientationSupported,
+                  let orientation = window?.windowScene?.interfaceOrientation else { return }
+            switch orientation {
+            case .landscapeLeft: connection.videoOrientation = .landscapeLeft
+            case .landscapeRight: connection.videoOrientation = .landscapeRight
+            case .portraitUpsideDown: connection.videoOrientation = .portraitUpsideDown
+            default: connection.videoOrientation = .portrait
+            }
+        }
     }
 }
